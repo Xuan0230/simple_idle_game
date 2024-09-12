@@ -1,0 +1,33 @@
+#assets-container {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 20px;
+  height: 20vh;
+}
+.asset {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+  min-width: 200px;
+  text-align: center;
+}
+.asset-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+.asset-description {
+  margin-bottom: 10px;
+}
+.asset-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.asset-button:disabled {
+  background: #ccc;
+}

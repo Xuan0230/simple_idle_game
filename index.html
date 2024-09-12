@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>簡易 Idle 遊戲</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>簡易 Idle 遊戲</h1>
+      <h1>簡易 Idle 遊戲</h1>
     </header>
 
     <div id="game-container">
+      <div id="left-column">
         <div id="coin-container"></div>
         <div id="gold">金幣: 0</div>
         <button id="click-button">點擊獲取金幣</button>
-        <div>
-            <h2>升級</h2>
-            <button class="upgrade-button" id="auto-upgrade">購買自動增長 (成本: 50 金幣)</button>
-        </div>
+      </div>
+      <div id="right-column">
+        <div id="upgrades">升級</div>
+        <button class="upgrade-button" id="auto-upgrade">
+          購買自動增長 (成本: 50 金幣)
+        </button>
+      </div>
     </div>
 
     <div id="popup-message" class="popup hidden">
-        <p id="popup-text"></p>
+      <p id="popup-text"></p>
     </div>
 
+    <div id="assets-container">
+      <!-- 這裡會顯示物品列表 -->
+      <!-- 每個物品都用 .asset 包起來 -->
+      <div class="asset" id="item-1">
+        <div class="asset-title">消失器1</div>
+        <div class="asset-description">無故消失 100 金幣</div>
+        <div class="asset-cost">金額: 100 金幣</div>
+        <button class="asset-button" data-cost="100">購買</button>
+      </div>
+      <div class="asset" id="item-2">
+        <div class="asset-title">陶朱隱園</div>
+        <div class="asset-description">購買一個看不到的陶朱隱園</div>
+        <div class="asset-cost">金額: 200 金幣</div>
+        <button class="asset-button" data-cost="200">購買</button>
+      </div>
+      <!-- 可以再增加更多物品 -->
+    </div>
 
     <footer>
-        <p>製作：ChatGPT X xuan_0230_</p>
+      <p>製作：ChatGPT X xuan_0230_</p>
     </footer>
 
     <script src="game.js"></script>
-</body>
-
+  </body>
 </html>
